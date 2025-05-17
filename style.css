@@ -230,6 +230,7 @@
         .feature-item:hover {
             transform: translateY(-5px);
             background-color: rgba(23, 35, 102, 0.8);
+            transform: scale(1.1);
         }
 
         .feature-icon {
