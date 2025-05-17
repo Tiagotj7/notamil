@@ -234,10 +234,6 @@
             filter: brightness(0) invert(1);
         }
 
-        .feature-icon:hover{
-          transform: scale(1.1);
-        }
-
         .feature-name {
             font-size: 14px;
             font-weight: 500;
