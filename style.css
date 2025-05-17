@@ -1,117 +1,119 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  font-family: "Orbitron", sans-serif;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: linear-gradient(90deg, #000 0%, #000 40%, #003 70%, #005 100%);
+            color: white;
+            overflow-x: hidden;
+        }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
 
-/*--------------------------------------------------------------------------*/
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-.App-header {
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 11px;
-  color: #ff4739;
-  padding: 5px 3%;
-  height: 100px;
-}
+        .logo-subtitle {
+            font-size: 10px;
+            color: #4d4d4d;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
 
-/*-------------------------------Img-Header-------------------------------------*/
+        .logo-main {
+            font-size: 36px;
+            font-weight: bold;
+            color: #009fff;
+            line-height: 0.9;
+        }
 
-.name-nav ul {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
 
-/*-------------------------------Img-Header-------------------------------------*/
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
 
-.icons-nav img {
-  height: 3vw;
-  cursor: pointer;
-}
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
 
-.icons-nav img:hover {
-  transform: scale(1.1);
-}
+        .slogan {
+            max-width: 50%;
+            padding-left: 20px;
+        }
 
-.name-nav img {
-  height: 18vw;
-}
+        .slogan h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
 
-/*---------------------------------Main-----------------------------------------*/
+        .special-emphasis {
+            display: block;
+            margin-top: 10px;
+        }
 
-main {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin-top: -5rem;
-}
+        .instructor {
+            margin-top: 50px;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
 
-.geral1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-}
+        .instructor-name {
+            font-weight: 600;
+        }
 
-/*------------------------------Logo-Main-----------------------------------------*/
+        .hero-image {
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+        }
 
-.logodev-container {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
 
-.perfillogo-container {
-  height: 50vw;
-  max-height: 500px;
-}
-
-/*---------------------------Information-Main--------------------------------------*/
-
-.information {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  font-size: 40px;
-}
-
-.information h1 {
-  margin: 5px 0; /* Reduz o espaçamento entre os títulos */
-  line-height: 1; /* Diminui a altura da linha */
-  text-align: start;
-}
-
-.information p{
-  display: flex;
-  font-size: 0.7em;
-}
-
- h1{
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .slogan, .hero-image {
+                max-width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+            
+            .slogan h1 {
+                font-size: 36px;
+            }
+            
+            .instructor {
+                margin-top: 30px;
+            }
+        }
