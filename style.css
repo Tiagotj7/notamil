@@ -227,6 +227,10 @@
             transition: all 0.3s ease;
         }
 
+        .feature-item:hover{
+          transform: scale(1.1);
+        }
+
         .feature-item:hover {
             transform: translateY(-5px);
             background-color: rgba(23, 35, 102, 0.8);
