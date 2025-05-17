@@ -408,6 +408,10 @@
     margin-bottom: 20px;
 }
 
+.testimonial-icon img{
+  width: 2em;
+}
+
 .quotes-icon {
     filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(190deg) brightness(119%) contrast(119%);
 }
