@@ -140,7 +140,7 @@ function setupFormSubmission() {
     
     if (contactForm) {
         // Modificar o action e método do formulário para usar FormSubmit
-        contactForm.setAttribute('action', 'https://formsubmit.co/tiagowork07@gmail.com');
+        contactForm.setAttribute('action', 'https://formsubmit.co/crislanclash98@gmail.com');
         contactForm.setAttribute('method', 'POST');
         
         // Adicionar campos ocultos necessários para o FormSubmit
