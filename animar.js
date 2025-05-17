@@ -139,61 +139,58 @@ function setupFormSubmission() {
     const contactForm = document.querySelector('.contact-form form');
     
     if (contactForm) {
+        // Modificar o action e método do formulário para usar FormSubmit
+        contactForm.setAttribute('action', 'https://formsubmit.co/tiagowork07@gmail.com');
+        contactForm.setAttribute('method', 'POST');
+        
+        // Adicionar campos ocultos necessários para o FormSubmit
+        const emailField = document.createElement('input');
+        emailField.type = 'hidden';
+        emailField.name = '_next';
+        emailField.value = window.location.href; // Redireciona de volta para a mesma página
+        contactForm.appendChild(emailField);
+        
+        const subjectField = document.createElement('input');
+        subjectField.type = 'hidden';
+        subjectField.name = '_subject';
+        subjectField.value = 'Nova mensagem do site NotaMil';
+        contactForm.appendChild(subjectField);
+        
+        const captchaField = document.createElement('input');
+        captchaField.type = 'hidden';
+        captchaField.name = '_captcha';
+        captchaField.value = 'false';
+        contactForm.appendChild(captchaField);
+        
+        // Adicionar honeypot para proteção contra spam
+        const honeypotField = document.createElement('input');
+        honeypotField.type = 'text';
+        honeypotField.name = '_honey';
+        honeypotField.style.display = 'none';
+        contactForm.appendChild(honeypotField);
+        
+        // Adicionar evento original para animações e validações
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Obter os valores do formulário
+            // Verificar se os campos estão preenchidos
             const name = this.querySelector('input[name="name"]').value;
             const email = this.querySelector('input[name="email"]').value;
             const message = this.querySelector('textarea[name="message"]').value;
             
-            // Verificar se os campos estão preenchidos
             if (!name || !email || !message) {
+                e.preventDefault(); // Impedir envio se os campos não estiverem preenchidos
                 showNotification('Por favor, preencha todos os campos.', 'error');
                 return;
             }
             
             // Animação de carregamento no botão
             const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
             submitBtn.style.backgroundColor = '#004c8a';
             
-            // Simulação de envio de email (normalmente seria uma requisição AJAX)
-            setTimeout(() => {
-                // Em uma implementação real, você usaria algo como:
-                /*
-                fetch('seu-endpoint-de-email', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        message,
-                        to: 'crislanclash98@gmail.com'
-                    }),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Processar resposta
-                })
-                .catch(error => {
-                    showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
-                });
-                */
-                
-                // Para fins de demonstração, apenas mostramos uma notificação de sucesso
-                showNotification('Mensagem enviada com sucesso para crislanclash98@gmail.com!', 'success');
-                
-                // Resetar o formulário e o botão
-                contactForm.reset();
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = '#0078d4';
-            }, 1500);
+            // Mostrar notificação de envio bem-sucedido
+            showNotification('Enviando mensagem para tiagowork07@gmail.com...', 'info');
+            
+            // Não impedimos o envio, deixamos o FormSubmit processar o formulário
         });
     }
 }
