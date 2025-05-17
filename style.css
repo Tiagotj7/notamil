@@ -167,6 +167,82 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
+        /* Opportunities Section */
+        .opportunities-section {
+            padding: 60px 40px;
+            background: linear-gradient(90deg, #000a3c 0%, #000764 50%, #000a3c 100%);
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(128, 128, 255, 0.2);
+            border-bottom: 1px solid rgba(128, 128, 255, 0.2);
+        }
+
+        .opportunities-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .opportunities-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .opportunities-content h2 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(15, 23, 70, 0.6);
+            padding: 30px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(23, 35, 102, 0.8);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            filter: brightness(0) invert(1);
+        }
+
+        .feature-name {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .main-content,
             .connected-section {
@@ -184,7 +260,8 @@
             }
             
             .slogan h1,
-            .connected-content h2 {
+            .connected-content h2,
+            .opportunities-content h2 {
                 font-size: 36px;
             }
             
@@ -194,5 +271,15 @@
 
             .connected-section::before {
                 width: 100%;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
