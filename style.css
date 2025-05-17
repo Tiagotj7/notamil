@@ -39,7 +39,7 @@ code {
 /*-------------------------------Img-Header-------------------------------------*/
 
 .icons-nav img {
-  height: 8vw;
+  height: 3vw;
   cursor: pointer;
 }
 
@@ -48,7 +48,7 @@ code {
 }
 
 .name-nav img {
-  height: 3vw;
+  height: 18vw;
 }
 
 /*---------------------------------Main-----------------------------------------*/
@@ -98,4 +98,15 @@ main {
   margin: 5px 0; /* Reduz o espaçamento entre os títulos */
   line-height: 1; /* Diminui a altura da linha */
   text-align: start;
+}
+
+ h1{
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
 }
