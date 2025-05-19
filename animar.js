@@ -140,7 +140,7 @@ function setupFormSubmission() {
     
     if (contactForm) {
         // Modificar o action e método do formulário para usar FormSubmit
-        contactForm.setAttribute('action', 'https://formsubmit.co/crislanclash98@gmail.com');
+        contactForm.setAttribute('action', 'https://formsubmit.co/suportenotamil2025@gmail.com');
         contactForm.setAttribute('method', 'POST');
         
         // Adicionar campos ocultos necessários para o FormSubmit
@@ -188,7 +188,7 @@ function setupFormSubmission() {
             submitBtn.style.backgroundColor = '#004c8a';
             
             // Mostrar notificação de envio bem-sucedido
-            showNotification('Enviando mensagem para tiagowork07@gmail.com...', 'info');
+            showNotification('Enviando mensagem para suportenotamil2025@gmail.com...', 'info');
             
             // Não impedimos o envio, deixamos o FormSubmit processar o formulário
         });
