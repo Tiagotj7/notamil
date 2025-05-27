@@ -1,9 +1,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
       
+
+        :root {
+         --font-destaque: "Orbitron",  sans-serif;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Orbitron', sans-serif;
+            font-family: var(--font-destaque);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(90deg, #000 0%, #000 40%, #003 70%, #005 100%);
@@ -45,7 +50,8 @@
         }
 
         .social-icons img {
-            width: 4em;
+            width: 3rem;
+            transition: 0.7s;
         }
 
         .social-icons img:hover{
@@ -498,6 +504,7 @@
 
 .contact-info-container {
     display: flex;
+    font-family: sans-serif;
     justify-content: space-between;
     gap: 40px;
 }
@@ -514,7 +521,9 @@
     margin-bottom: 10px;
 }
 
+
 .contact-label {
+    font-family: sans-serif;
     font-size: 16px;
     margin-bottom: 5px;
     color: #888;
@@ -556,6 +565,7 @@
     margin-bottom: 20px;
 }
 
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -564,8 +574,9 @@
     border: 1px solid rgba(0, 159, 255, 0.2);
     border-radius: 5px;
     color: white;
-    font-family: 'Orbitron', sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 
@@ -604,6 +615,7 @@
 
 .footer-content {
     display: flex;
+    font-family: sans-serif;
     flex-direction: column;
     align-items: center;
     gap: 5px;
